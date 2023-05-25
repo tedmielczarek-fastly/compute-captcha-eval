@@ -9,7 +9,7 @@ fn main(_req: Request) -> Result<Response, Error> {
     //TODO: generate an actual CAPTCHA
     let image = include_bytes!("../see-no-evil.png");
     let elapsed_ms = start.elapsed().as_millis();
-    println!("Generated CAPTCHA in {elapsed_ms} ms");
+    println!("Generated CAPTCHA in: {elapsed_ms}");
     let image_b64 = base64::engine::general_purpose::STANDARD_NO_PAD.encode(image);
     let body = format!(
         r#"<!DOCTYPE html>
