@@ -10,9 +10,9 @@ fn main(_req: Request) -> Result<Response, Error> {
     let fonts = vec![Font::try_from_bytes(include_bytes!("../NotoSans-Regular.ttf")).unwrap()];
     let builder = CaptchaBuilder {
         //custom attribute
-        width: 120,
-        height: 40,
-        length: 4,
+        width: 220,
+        height: 120,
+        length: 5,
         fonts: &fonts,
         //default attribute
         ..Default::default()
