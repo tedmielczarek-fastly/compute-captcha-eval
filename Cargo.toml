@@ -12,3 +12,4 @@ debug = 1
 [dependencies]
 base64 = "0.21.2"
 fastly = "^0.9.2"
+tiny_captcha = "0.1.4"

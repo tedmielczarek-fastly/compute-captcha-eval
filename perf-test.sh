@@ -20,4 +20,4 @@ echo "Finished, killing server"
 kill %1
 
 avg=$(cat $LOG | grep 'Generated CAPTCHA in:' | sed -E -e 's/.*Generated CAPTCHA in: ([0-9]+)$/\1/' | awk '{ sum += $0; count += 1 } END { print sum/count }')
-echo "Average generation time: $avg ms"
+echo "Average generation time: $avg µs"
